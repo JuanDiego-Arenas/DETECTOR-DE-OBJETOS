@@ -10,8 +10,8 @@ if not os.path.exists(Datos):
 
 cap = cv2.VideoCapture(0)
 
-x1, y1 = 195, 80
-x2, y2 = 435, 400
+x1, y1 = 230, 90
+x2, y2 = 410, 410
 
 count = 0
 while True:
@@ -22,8 +22,8 @@ while True:
 	cv2.rectangle(frame,(x1,y1),(x2,y2),(255,0,0),2)
 
 	objeto = imAux[y1:y2,x1:x2]
-	objeto = imutils.resize(objeto, width=80)
-	# print(objeto.shape)
+	objeto = imutils.resize(objeto, width=43)
+	# ?print(objeto.shape)
 
 	k = cv2.waitKey(1)
 	if k == ord('s'):
