@@ -1,6 +1,6 @@
 import cv2
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 Resaltador = cv2.CascadeClassifier("cascade.xml")
 
@@ -10,7 +10,7 @@ while True:
 	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
 	toy = Resaltador.detectMultiScale(gray,
-	scaleFactor = 4.8,
+	scaleFactor = 4.5,
     minNeighbors = 91,
     minSize=(70,78))
 
